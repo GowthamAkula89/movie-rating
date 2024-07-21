@@ -7,7 +7,7 @@ const generateToken = (userId, expires, tokenType, secret = process.env.JWT_SECR
         id: userId,
         type: tokenType,
         exp: expires,
-        iat: Date.now()/1000, //issued at time
+        iat: Math.floor(Date.now() / 1000), //issued at time
     }
     const jwtToken = jwt.sign(payload, secret);
     return jwtToken;
