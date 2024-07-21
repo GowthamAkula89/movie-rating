@@ -1,9 +1,9 @@
 const express = require('express');
-const movieRatingRoute = require('./movieRating.route');
+const movieRoute = require('./movie.route');
 
 const authRoute = require('./auth.route');
 const router = express.Router();
 router.use('/users', authRoute)
-router.use('/movieRating', movieRatingRoute);
+router.use('/movies', movieRoute);
 console.log("Index Route")
 module.exports = router;
