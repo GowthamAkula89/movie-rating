@@ -3,6 +3,7 @@ const compression=require("compression");
 const cors=require("cors");
 const httpStatus=require("http-status");
 const helmet=require("helmet");
+const router = require('./routes');
 
 const app  = express();
 //Helmet is a middleware that helps secure your Express.js applications by setting various HTTP headers.
@@ -24,4 +25,5 @@ the browser enforces the same-origin policy. If the server's domain is different
 client-side application, the browser, by default, blocks the request for security reasons.
 */
 app.use(cors());
+app.use('/v1', router)
 module.exports = app;
