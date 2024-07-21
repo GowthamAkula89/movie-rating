@@ -25,5 +25,5 @@ the browser enforces the same-origin policy. If the server's domain is different
 client-side application, the browser, by default, blocks the request for security reasons.
 */
 app.use(cors());
-app.use('/v1', router)
+app.use('/api', router)
 module.exports = app;
