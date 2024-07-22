@@ -14,5 +14,5 @@ route.post('/:id/reviews', authenticate, reviewController.addReview);
 route.put('/:id/reviews/:reviewId', authenticate, reviewController.updateReview);
 route.delete('/:id/reviews/:reviewId', authenticate, reviewController.deleteReview);
 route.get('/:id/reviews', authenticate, reviewController.getReviews)
-route.get(':id/averageRating', authenticate, reviewController.getAverageRating)
+route.get('/:id/averageRating', authenticate, reviewController.getAverageRating)
 module.exports = route;
