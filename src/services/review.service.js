@@ -16,6 +16,11 @@ const updateReview = async(movieId, reviewId, data) => {
         throw new Error(httpStatus.BAD_REQUEST, "Invalid Id")
     }
     //Write the logic to update it in review list
+    const reviewIdx = movie.reviews.findIndex(item => item._id === reviewId);
+    if(reviewIdx ===-1){
+        throw new ApiError(httpStatus.BAD_REQUEST,"ReviewId not in reviews")
+    }
+    movie.reviews[reviewIdx] = data;
 }
 const deleteReview = async(movieId, reviewId) => {
     const movie = await Movie.findById(movieId);
