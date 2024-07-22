@@ -63,4 +63,4 @@ Make sure you have Node.js and npm installed on your machine.
 
 
 ### Live web URL
-- Backend: https://movie-rating-ag.onrender.com/v1/ 
+- Backend: https://movie-rating-ag.onrender.com/
