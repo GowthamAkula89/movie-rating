@@ -27,7 +27,17 @@ const movieSchema = mongoose.Schema({
         type: String,
         required: true,
         trim: true
-    }
+    },
+    reviews:[{
+        rating:{
+            type: Number,
+            require: true
+        },
+        text:{
+            type: String,
+            trim: true
+        }
+    }]
     },
     {
         timeStamp: true
